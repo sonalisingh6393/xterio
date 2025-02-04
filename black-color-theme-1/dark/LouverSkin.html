@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="zxx">   
+<head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+        <meta name="description" content="Mrittik is a Modern Architecture Theme">
+        <meta name="author" content="">
+        <!-- Favicon and touch Icons -->
+        <link href="../assets/img/favicon.png" rel="shortcut icon" type="image/png">
+        <link href="../assets/img/apple-touch-icon.html" rel="apple-touch-icon">
+        <link href="../assets/img/apple-touch-icon-72x72.html" rel="apple-touch-icon" sizes="72x72">
+        <link href="../assets/img/apple-touch-icon-114x114.html" rel="apple-touch-icon" sizes="114x114">
+        <link href="../assets/img/apple-touch-icon-144x144.html" rel="apple-touch-icon" sizes="144x144">
+        <link  rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">             
+        <title>Xteriohub</title>          
+        <!-- Styles Include -->
+        <link rel="stylesheet" href="../assets/css/style.css">       
+        <style>
+            @keyframes fadeInLeft {
+              from {
+                opacity: 0;
+                transform: translateX(-20px);
+              }
+              to {
+                opacity: 1;
+                transform: translateX(0);
+              }
+            }
+          
+            @keyframes fadeInDown {
+              from {
+                opacity: 0;
+                transform: translateY(-20px);
+              }
+              to {
+                opacity: 1;
+                transform: translateY(0);
+              }
+            }
+          
+            @keyframes fadeInUp {
+              from {
+                opacity: 0;
+                transform: translateY(20px);
+              }
+              to {
+                opacity: 1;
+                transform: translateY(0);
+              }
+            }
+          
+            .txt-container {
+              flex: 1;
+            
+              animation: fadeInLeft 1s ease-in-out;
+              align-items: center;
+            }
+          
+            h3 {
+              margin-bottom: 10px;
+              color: black;
+              animation: fadeInDown 8s ease-in-out;
+              
+            }
+          
+            p {
+              animation: fadeInUp 10s ease-in-out;
+              margin-bottom: 10px;
+              text-align: justify;
+              max-width: 60ch; /* Roughly limits text to 10 words per line */
+              line-height: 1.6;
+              margin-left:10%;
+            }
+
+            p2 {
+              animation: fadeInUp 10s ease-in-out;
+              margin-bottom: 10px;
+              text-align: justify;
+              max-width: 60ch; /* Roughly limits text to 10 words per line */
+              line-height: 1.6;
+            }
+
+            @keyframes borderRadiusEffect {
+        0% {
+            border-radius: 65%;
+        }
+        50% {
+            border-radius: 5%;
+        }
+        100% {
+            border-radius: 65%;
+        }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes slideUp {
+      from { transform: translateY(20px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    @media (max-width: 576px) {
+      h1 {
+        font-size: 2.5rem !important;
+      }
+
+      .txt-container p {
+        font-size: 14px !important;
+        margin-top: 10px !important;
+      }
+
+      img {
+        max-width: 100% !important;
+        height: auto !important;
+      }
+
+      .container {
+        flex-direction: column !important;
+        align-items: center !important;
+      }
+
+      .txt-container {
+        margin: 10px !important;
+        text-align: center !important;
+      }
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 2rem !important;
+      }
+
+      .txt-container p {
+        font-size: 12px !important;
+        margin-top: 5px !important;
+      }
+
+      .abc img {
+        max-width: 90% !important;
+        height: auto !important;
+      }
+
+      .container {
+        padding: 10px !important;
+      }
+    }
+
+    .responsive-title {
+    font-size: 6rem;
+  }
+
+  @media (max-width: 576px) {
+    .responsive-title {
+      font-size: 3rem; /* Adjust font size for smaller screens */
+      top: 25%; /* Adjust vertical positioning */
+    }
+  }
+
+  @media (max-width: 480px) {
+    .responsive-title {
+      font-size: 2.5rem; /* Further reduce font size for very small screens */
+      top: 20%; /* Adjust vertical positioning further */
+    }
+  }
+          </style>
+    </head>
+    
+
+        
+    <body class="bg-dark">
+      <!-- Preloader -->
+      <div id="preloader">
+    <div class="preloader-inner">
+      <div class="spinner"></div>
+      <div class="loading-text">
+        <span data-preloader-text="X" class="characters">X</span>
+        
+        <span data-preloader-text="T" class="characters">T</span>
+        
+        <span data-preloader-text="E" class="characters">E</span>
+        
+        <span data-preloader-text="R" class="characters">R</span>
+        
+        <span data-preloader-text="I" class="characters">I</span>
+
+        <span data-preloader-text="O" class="characters">O</span>
+
+        <span data-preloader-text="-" class="characters">-</span>
+                  <span data-preloader-text="H" class="characters">H</span>
+                  <span data-preloader-text="U" class="characters">U</span>
+                  <span data-preloader-text="B" class="characters">B</span>
+      </div>
+    </div>
+  </div>
+      <!-- Color Mode Switcher -->
+  <div id="mode_switcher">
+    <span><i class="bi bi-moon-fill"></i></span>	
+  </div>        
+      <!-- Cursor Effect -->
+      <div class="pointer bnz-pointer" id="bnz-pointer"></div>
+
+      <!-- Header -->
+  <header class="header">				
+          <div class="container">
+              <div class="header_inner d-flex align-items-center justify-content-between">
+                  <div class="logo">
+                      <a href="home.html" class="light_logo"><img src="../assets/img/log.png" alt="logo"></a>
+                      <a href="home.html" class="dark_logo"><img src="../assets/img/log.png" alt="logo"></a>
+                  </div>
+                  
+                  <div class="mainnav d-none d-lg-block">
+                      <ul class="main_menu">
+                          <li class="menu-item menu-item-has-children active"><a href="home.html">Home</a>                                
+                          </li>                           
+                          <li class="menu-item "><a href="about.html">About Us</a>                                
+                          </li>                                                                                
+                         <li class="menu-item menu-item-has-children"><a href="#">Our Brands</a>
+                              <ul class="sub-menu">                                   
+                                  <li class="menu-item menu-item-has-children"><a href="#">Frontek</a>
+                                      <ul class="sub-menu">
+                                          <li class="menu-item"><a href="team.html">Textured</a></li>
+                                          <li class="menu-item"><a href="team-details.html">Soft Stone Cladding Panels</a></li>
+                                          <li class="menu-item"><a href="team-details.html">Stone-like Cladding Panels</a></li>
+                                          <li class="menu-item"><a href="team-details.html">Wood-like Cladding Panels</a></li>
+                                          <li class="menu-item"><a href="team-details.html">Colored Panels Panels</a></li>
+                                          <li class="menu-item"><a href="team-details.html">Volume</a></li>                                            
+                                           <li class="menu-item"><a href="team-details.html">Metal-like Cladding Panels</a></li>
+                                            <li class="menu-item"><a href="team-details.html">  Customize color</a></li>
+                                      </ul>
+                                  </li>                                   
+                                  <li class="menu-item menu-item-has-children"><a href="#">Tempio</a>
+                                      <ul class="sub-menu">
+                                          <li class="menu-item"><a href="Basic-Skin.html">Basic Skin</a></li>
+                                          <li class="menu-item"><a href="LouverSkin.html"> Louver Skin</a></li>
+                                          <li class="menu-item"><a href="architecure.html"> Architecture Skin</a></li>
+                                          <li class="menu-item"><a href="block-skin-english.html">Block Skin</a></li>
+                                          <li class="menu-item"><a href="Rustikota.html"> Rustikotta Skin</a></li>
+                                          <li class="menu-item"><a href="listelo-skin-english.html"> Listelo  Skin</a></li>
+                                          <li class="menu-item"><a href="brick-skin-english.html"> Brick Skin</a></li>                                          
+                                          <li class="menu-item"><a href="Colors.html"> Colour Skin</a></li>
+                                      </ul>
+                                  </li>                                    
+                                   <li class="menu-item menu-item-has-children"><a href="#">Mahima</a>
+                                      <ul class="sub-menu">
+                                          <li class="menu-item"><a href="service-1.html">Service One</a></li>
+                                          <li class="menu-item"><a href="service-2.html">Service Two</a></li>
+                                          <li class="menu-item"><a href="service-details.html">Service Details</a></li>
+                                      </ul>
+                                  </li>                                     
+                                  <li class="menu-item menu-item-has-children"><a href="#">Steni</a>
+                                      <ul class="sub-menu">
+                                          <li class="menu-item"><a href="shop-1.html">Shop One</a></li>
+                                          <li class="menu-item"><a href="shop-2.html">Shop Two</a></li>
+                                          <li class="menu-item"><a href="shop-3.html">Shop Three</a></li>
+                                          <li class="menu-item"><a href="shop-product.html">Product Details</a></li>
+                                          <li class="menu-item"><a href="shop-cart.html">Shop Cart</a></li>
+                                          <li class="menu-item"><a href="shop-checkout.html">Checkout</a></li>
+                                          <li class="menu-item"><a href="login.html">Login</a></li>
+                                      </ul>
+                                  </li>
+                                  
+                              </ul>
+                          </li>                                                      
+                           <li class="menu-item"><a href="project-1.html">Services</a></li>
+                          <li class="menu-item"><a href="blog.html">Blog</a></li>                           
+                      </ul>
+                  </div>
+                  <div class="header_right_part d-flex align-items-center">
+                      <button class="aside_open">
+                          <span class="line"></span>
+                          <span class="line"></span>
+                          <span class="line"></span>
+                      </button>
+                     
+                      <div class="open_search">
+                          <form class="search_form" action="https://wpthemebooster.com/demo/themeforest/html/mrittik/dark/search.php">
+                              <input type="text" name="search" class="keyword form-control" placeholder="Search..." >
+                              <button type="submit" class="form-control-submit"><i class="bi bi-search"></i></button>
+                          </form>
+                      </div>
+                     
+                      <button type="button" class="mr_menu_toggle d-lg-none">
+                          <i class="bi bi-list"></i>
+                      </button>
+                  </div>
+              </div>
+    </div>
+  </header>
+
+   <div class="mr_menu">
+    <div class="mr_menu_overlay"></div>
+    <button type="button" class="mr_menu_close"><i class="bi bi-x-lg"></i></button>
+          
+              <div class="">
+                      <a href="home.html" class="light_logo"><img src="../assets/img/log.png" alt="logo"></a>
+                      
+                 
+          </div> <!-- Keep this div empty. Logo will come here by JavaScript -->
+    <div class="mr_navmenu"></div> <!-- Keep this div empty. Menu will come here by JavaScript -->
+
+          <!-- Footer-->
+          <footer class="footer p-0">
+              <div class="footer_inner pb-0">
+                  <div class="footer_elements d-flex align-items-center justify-content-center">
+                      <div class="footer_elements_inner">
+                          <div class="footer_social">
+                              <ul class="social_list justify-content-center">
+                                  <li class="facebook"><a href="#"><i class="bi bi-facebook"></i></a></li>
+                                  <li class="twitter"><a href="#"><i class="bi bi-twitter"></i></a></li>
+                                  <li class="instagram"><a href="#"><i class="bi bi-instagram"></i></a></li>
+                                  <li class="youbetube"><a href="#"><i class="bi bi-youtube"></i></a></li>
+                              </ul>
+                          </div>
+                         
+                          <div class="copyright">
+                              <p>Mrittik 2023. All Rights Reserved</p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </footer>
+  </div>
+           
+  <div class="aside_info_wrapper">
+    <button class="aside_close"><i class="bi bi-x-lg"></i></button>
+          <div class="aside_logo">
+              <a href="home.html" class="light_logo"><img src="../assets/img/log.png" alt="logo"></a>
+              <a href="home.html" class="dark_logo"><img src="../assets/img/log.png" alt="logo"></a>
+          </div>
+    <div class="aside_info_inner">
+              
+              
+              <div class="aside_info_inner_box">
+                  <h5>Contact Info</h5>
+                  <p>+91 98450 (62303)</p>
+                  <p>3 Madison Street, NY <br> United States of America</p>
+                  <p>lcvenkat@xteriohub.com</p>
+
+                  <h5>Office Address</h5>
+                  <p>Plot No 5, Scalex, Vaswani Augusta Lane,
+                      Whistling Greens, Challaghatta,
+                      Embassy Golf Link Road, Domlur,
+                      Bangalore - 560071</p>
+              </div>
+              <div class="social_sites">
+                  <ul class="d-flex align-items-center justify-content-center">
+                      <li><a href="#"><i class="bi bi-facebook"></i></a></li>
+                      <li><a href="#"><i class="bi bi-twitter"></i></a></li>
+                      <li><a href="#"><i class="bi bi-instagram"></i></a></li>
+                      <li><a href="#"><i class="bi bi-youtube"></i></a></li>
+                  </ul>
+              </div>
+    </div>
+  </div> 
+        <section style="">
+                    <div style="position: relative; text-align: center; width: 100%;">
+               <div>
+                <h1
+                style="
+                    position: absolute;
+                    top: 30%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    color: white;
+                    font-size: 6rem;
+                    font-weight: 300; /* Make the font thinner */
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7),
+                                 -2px -2px 4px rgba(255, 255, 255, 0.3);
+                    z-index: 1;
+                "
+                class="responsive-title"
+            >
+                ORGANIC LOUVER
+            </h1>
+                <img src="../assets/LouverSkin/Tempio_Organic_Louver-21.jpg" alt="Organic Louver" style="width: 100%; display: block;">
+            </div>
+            <div style="background-color: #fff; display: flex; align-items: center; padding: 20px;">
+                <!-- Text Section -->
+                <div class="txt-container">
+                    <h1 style="  
+                    margin-left:10%; 
+                    color: black;
+                    animation: fadeInDown 8s ease-in-out; ">Reinventing Ceramic Decoration</h1>
+                    <p style="color:rgb(119, 112, 112); font-size: 23px; margin-top: 30px;">
+                      Introducing a groundbreaking product that blends advanced technology with
+                      traditional concepts to create a modern, distinctive design. Architecture
+                      and design have always evolved together, sharing spaces and projects. Yet,
+                      both rely on innovation to move forward through the generations.
+                    </p>
+                    <p style="color:rgb(119, 112, 112); font-size: 23px;">
+                      Organic Louver is Tempio’s new line of ceramic louvers that seamlessly
+                      combines architecture with design, meeting the demands of contemporary and
+                      alternative spaces. With emotional designs, Organic Louver offers a timeless
+                      perspective that can fit seamlessly into any environment.
+                    </p>
+                  </div>
+                
+              <!-- Image Section -->
+              <div style="flex: 1; animation: fadeInRight 1s ease-in-out;">
+                <img src="../assets/LouverSkin/Tempio_Organic_Louver-fachada-ventilada.jpg" 
+                     style="width: 100%; max-width: 500px; height: auto; animation: borderRadiusEffect 5s ease-in-out infinite; border-radius: 5px;">
+            </div>
+            </div>
+           </div>
+           <div class="container d-flex align-items-center justify-content-between mt-5" style="flex-wrap: wrap; background-color: #fff;">
+            <!-- Image Section -->
+            <div class="abc" style="flex: 1; animation: fadeIn 2s; ">
+              <img src="../assets/LouverSkin/IMAGEN-MEDIDAS-ORGANIC-LOUVER_Mesa-de-trabajo-1.jpg" 
+                   alt="Organic Louver" 
+                   style="width: 80%;  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
+            </div>
+        
+            <!-- Text Section -->
+            <div style="flex: 1; animation: slideUp 2s; max-width: 50%;">
+              <h1 style="font-family: Arial, sans-serif; font-size: 3.5rem; font-weight: bold; color: #2c3e50; display: flex;justify-content: center;margin-bottom: 10px;">
+                Infinite Combinations
+              </h1>
+              <p2 style="font-family: Arial, sans-serif; font-size: 1.5rem; color: #515858; line-height: 1.6;">
+                Each Organic Louver piece becomes a work of art, featuring geometric, sinuous, or pointed shapes. These versatile
+                pieces can be used for cladding facades, decorative elements, room dividers, sunshades, or ventilated building
+                envelopes. Whether used indoors or outdoors, Organic Louver allows for endless design possibilities, offering
+                elegant and innovative solutions.
+              </p2>
+            </div>
+          </div>
+          <div class="container d-flex align-items-center justify-content-between mt-5" style="flex-wrap: wrap; background-color: #fff;height: 50%;">
+            <!-- Image Section -->
+            <div class="abc" style="flex: 1; animation: fadeIn 2s; ">
+              <img src="../assets/LouverSkin/Tempio_Organic_Louver-21.jpg" 
+                   alt="Organic Louver" 
+                   style="width: 80%; height: 426px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
+            </div>
+        
+            <!-- Text Section -->
+            <div style="flex: 1; animation: slideUp 2s; max-width: 50%; margin-right: 20px;">
+              <h1 style="font-family: Arial, sans-serif; font-size: 3.5rem; font-weight: bold; color: #2c3e50; display: flex;justify-content: center;margin-bottom: 10px;">
+                Unique Pieces
+              </h1>
+              <p2 style="font-family: Arial, sans-serif; font-size: 1.5rem; color: #515858; line-height: 1.6;">
+                Every piece of Organic Louver is crafted to be a unique work of art, with shapes that range from geometric to sinuous to pointed.
+             These pieces serve as striking facades or decorative materials, adding sophistication and originality to projects like room dividers, sunshades, or ventilated building cladding.
+              </p2>
+            </div>
+          </div>
+          <div class="container d-flex align-items-center justify-content-between mt-5" style="flex-wrap: wrap; background-color: #fff;">
+            <!-- Image Section -->
+            <div class="abc" style="flex: 1; animation: fadeIn 2s; ">
+              <img src="../assets/LouverSkin/Tempio_Organic_Louver-8.jpg" 
+                   alt="Organic Louver" 
+                   style="width: 80%;  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
+            </div>
+        
+            <!-- Text Section -->
+            <div style="flex: 1; animation: slideUp 2s; max-width: 50%; margin-right: 20px;">
+              <h1 style="font-family: Arial, sans-serif; font-size: 3.5rem; font-weight: bold; color: #2c3e50; display: flex;justify-content: center;margin-bottom: 10px;">
+                Innovation
+              </h1>
+              <p2 style="font-family: Arial, sans-serif; font-size: 1.5rem; color: #515858; line-height: 1.6;">
+                Organic Louver is Tempio’s innovative ceramic line, fully merging architecture with design to fulfill both contemporary and alternative needs.
+                 Designed with emotional inspiration, Organic Louver brings a timeless touch to any space, offering versatile solutions for modern architecture.
+
+              </p2>
+            </div>
+          </div>
+        </section>
+      
+        <!-- Footer-->
+        <footer class="footer bg-dark-200 box_padding">
+          <div class="footer_inner bg-black">
+              <div class="container">
+                  <div class="row align-items-end">
+                      <div class="col-lg-4 col-md-2 col-sm-2">
+                          <div class="section-header">
+                              <h2 style="color:#2596be">Contact</h2>
+                          </div>
+                      </div>
+                      <div class="col-lg-4 col-md-5 col-sm-5">
+                          <div class="communication">
+                              <div class="info_body">
+                                  <h6>Studio Website</h6>
+                                  <h5>http://www.xteriohub.com/</h5>
+                              </div>
+                              <div class="info_body">
+                                  <h6>Email Address</h6>
+                                  <h5>lcvenkat@xteriohub.com</h5>
+                              </div>
+                              <div class="info_body">
+                                  <h6>Phone No</h6>
+                                  <h5>91 98450 (62303)</h5>
+                              </div>
+                              <div class="info_body">
+                                  <h6>Office Address</h6>
+                                  <h5>Plot No 5, Scalex, Vaswani Augusta Lane,
+                                      Whistling Greens, Challaghatta,
+                                      Embassy Golf Link Road, Domlur,
+                                      Bangalore - 560071</h5>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-lg-4 col-md-5 col-sm-5">
+                          <div class="footer_elements d-flex align-items-center justify-content-end">
+                              <div class="footer_elements_inner">
+                                  <div class="footer_logo">
+                                      <a href="home.html" class="light_logo"><img src="../assets/img/log.png" alt="logo"class="expo-logo"></a>
+                                  </div>
+                                  <div class="footer_social">
+                                      <ul class="social_list">
+                                          <li class="facebook"><a href="#"><i class="bi bi-facebook"></i></a></li>
+                                          <li class="twitter"><a href="#"><i class="bi bi-twitter"></i></a></li>
+                                          <li class="instagram"><a href="#"><i class="bi bi-instagram"></i></a></li>
+                                          <li class="youbetube"><a href="#"><i class="bi bi-youtube"></i></a></li>
+                                      </ul>
+                                  </div>
+                                  <!-- <div class="terms_condition">
+                                      <ul>
+                                          <li><a href="#">Terms</a></li>
+                                          <li><a href="#">Condition</a></li>
+                                          <li><a href="#">Policy</a></li>
+                                      </ul>
+                                  </div> -->
+                                  <div class="copyright">
+                                      <p>Mizzlecodes 2023. All Rights Reserved</p>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <!-- Section Grid Lines -->
+              <ul class="grid_lines d-none d-md-flex justify-content-between">
+                  <li class="grid_line"></li>
+                  <li class="grid_line"></li>
+                  <li class="grid_line"></li>
+                  <li class="grid_line"></li>
+                  <li class="grid_line"></li>
+                  <li class="grid_line"></li>
+                  <li class="grid_line"></li>
+              </ul>
+          </div>
+      </footer>
+        <!-- <div class="totop">
+            <a href="#">UP</a>
+        </div> -->
+        <!-- Section Grid Lines -->
+        <ul class="grid_lines d-none d-md-flex justify-content-between">
+            <li class="grid_line"></li>
+            <li class="grid_line"></li>
+            <li class="grid_line"></li>
+            <li class="grid_line"></li>
+            <li class="grid_line"></li>
+            <li class="grid_line"></li>
+            <li class="grid_line"></li>
+        </ul>
+        <a href="#" class="btn-whatsapp-pulse">
+            <i class="fab fa-whatsapp"></i>
+        </a>  
+        <!-- Core JS -->
+        <script src="../assets/js/jquery-3.6.0.min.js"></script>
+        <script src="../assets/js/bootstrap.bundle.min.js"></script>                
+        <!-- Swiper for Slider Type -->
+        <script src="../plugins/swiper/swiper-bundle.min.js"></script>
+        <!-- Funfacts -->
+        <script src="../assets/js/funfacts.js"></script>
+        <!-- Portfolio -->
+        <script src="../plugins/isotope/isotope.pkgd.min.js"></script>
+        <script src="../plugins/isotope/imagesloaded.pkgd.min.js"></script>
+        <script src="../plugins/isotope/packery-mode.pkgd.js"></script>
+        <script src="../plugins/isotope/tilt.jquery.js"></script>
+        <script src="../plugins/isotope/isotope-init.js"></script>                
+        <!-- Cursor Effect -->
+        <script src="../plugins/cursor-effect/cursor-effect.js"></script>
+        
+        <!-- Select2 -->
+        <script src="../plugins/select2/js/select2.min.js"></script>
+        
+        <!-- AOS effect JS -->
+        <script src="../plugins/aos/aos.js"></script>
+        
+        <!-- Theme Custom JS -->
+        <script src="../assets/js/theme.js"></script>
+    </body>
+
+</html>

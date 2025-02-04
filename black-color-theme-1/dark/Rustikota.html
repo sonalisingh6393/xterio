@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+<html lang="zxx">
+    
+<head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+        <meta name="description" content="Mrittik is a Modern Architecture Theme">
+        <meta name="author" content="">
+        <!-- Favicon and touch Icons -->
+        <link href="../assets/img/favicon.png" rel="shortcut icon" type="image/png">
+        <link href="../assets/img/apple-touch-icon.html" rel="apple-touch-icon">
+        <link href="../assets/img/apple-touch-icon-72x72.html" rel="apple-touch-icon" sizes="72x72">
+        <link href="../assets/img/apple-touch-icon-114x114.html" rel="apple-touch-icon" sizes="114x114">
+        <link href="../assets/img/apple-touch-icon-144x144.html" rel="apple-touch-icon" sizes="144x144">
+        <link  rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">      
+       
+        <title>Xteriohub</title>    
+        
+        <!-- Styles Include -->
+        <link rel="stylesheet" href="../assets/css/style.css">
+        <style>
+            .image-container {
+              position: relative;
+              display: inline-block;
+              width: 80%;
+              margin: 20px 0; /* Adds spacing between images */
+              margin-left: 100px;
+            }
+          
+            .hover-image {
+              transition: transform 0.5s ease-in-out, filter 0.5s;
+              box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+              border: 2px solid white; /* White border */
+              border-radius: 2px; /* Rounded corners */
+            }
+          
+            .hover-image:hover {
+              transform: scale(1.05); /* Slight zoom on hover */
+              filter: brightness(0.9); /* Slight dimming effect */
+            }
+          
+            .hover-text {
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              text-align: center;
+              font-family: Arial, sans-serif;
+              font-size: 1rem;
+              font-weight: bold;
+              color: #2c3e50;
+              opacity: 0;
+              transition: opacity 0.5s ease-in-out;
+              z-index: 1;
+              background: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+              padding: 10px 15px;
+              border-radius: 5px; /* Smooth rounded corners */
+              box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            }
+          
+            .image-container:hover .hover-text {
+              opacity: 1;
+            }
+            h2 {
+      margin: 30px 190px;
+      font-size: 1.8rem;
+      color: #dfd6d6;
+    }
+            .image-hover-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+
+.hover-div {
+  position: relative;
+  width: 600px;
+  height: 400px;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+  margin-top: 20px;
+}
+
+.hover-div:hover {
+  transform: scale(1.05);
+}
+
+.hover-div img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  color: #fff;
+  text-align: center;
+  transition: opacity 0.3s ease;
+}
+
+.hover-div:hover .overlay {
+  opacity: 1;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hover-div {
+    width: 90%;
+    height: 180px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hover-div {
+    width: 100%;
+    height: 160px;
+  }
+
+  .overlay h3 {
+    font-size: 1rem;
+  }
+
+  .overlay p {
+    font-size: 0.9rem;
+  }
+}
+
+          </style>
+        
+    </head>
+
+
+    <body class="bg-dark">
+
+        <!-- Preloader -->
+        <div id="preloader">
+			<div class="preloader-inner">
+				<div class="spinner"></div>
+				<div class="loading-text">
+					<span data-preloader-text="X" class="characters">X</span>
+					
+					<span data-preloader-text="T" class="characters">T</span>
+					
+					<span data-preloader-text="E" class="characters">E</span>
+					
+					<span data-preloader-text="R" class="characters">R</span>
+					
+					<span data-preloader-text="I" class="characters">I</span>
+
+					<span data-preloader-text="O" class="characters">O</span>
+
+					<span data-preloader-text="-" class="characters">-</span>
+                    <span data-preloader-text="H" class="characters">H</span>
+                    <span data-preloader-text="U" class="characters">U</span>
+                    <span data-preloader-text="B" class="characters">B</span>
+				</div>
+			</div>
+		</div>
+        <!-- Color Mode Switcher -->
+		<div id="mode_switcher">
+			<span><i class="bi bi-moon-fill"></i></span>	
+		</div>        
+
+        <!-- Cursor Effect -->
+        <div class="pointer bnz-pointer" id="bnz-pointer"></div>
+
+        <!-- Header -->
+		<header class="header">				
+            <div class="container">
+                <div class="header_inner d-flex align-items-center justify-content-between">
+                    <div class="logo">
+                        <a href="home.html" class="light_logo"><img src="../assets/img/log.png" alt="logo"></a>
+                        <a href="home.html" class="dark_logo"><img src="../assets/img/log.png" alt="logo"></a>
+                    </div>
+                    
+                    <div class="mainnav d-none d-lg-block">
+                        <ul class="main_menu">
+                            <li class="menu-item menu-item-has-children active"><a href="home.html">Home</a>
+                                
+                            </li>
+                            
+                            <li class="menu-item "><a href="about.html">About Us</a>
+                                
+                            </li>
+                           
+                           
+                           
+                           <li class="menu-item menu-item-has-children"><a href="#">Our Brands</a>
+                                <ul class="sub-menu">
+                                   
+                                    <li class="menu-item menu-item-has-children"><a href="#">Frontek</a>
+                                        <ul class="sub-menu">
+                                            <li class="menu-item"><a href="team.html">Textured</a></li>
+                                            <li class="menu-item"><a href="team-details.html">Soft Stone Cladding Panels</a></li>
+                                            <li class="menu-item"><a href="team-details.html">Stone-like Cladding Panels</a></li>
+                                            <li class="menu-item"><a href="team-details.html">Wood-like Cladding Panels</a></li>
+                                            <li class="menu-item"><a href="team-details.html">Colored Panels Panels</a></li>
+                                            <li class="menu-item"><a href="team-details.html">Volume</a></li>
+                                            
+                                             <li class="menu-item"><a href="team-details.html">Metal-like Cladding Panels</a></li>
+                                              <li class="menu-item"><a href="team-details.html">  Customize color</a></li>
+                                        </ul>
+                                    </li>
+                                    
+                                  
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    <li class="menu-item menu-item-has-children"><a href="#">Tempio</a>
+                                        <ul class="sub-menu">
+                                            <li class="menu-item"><a href="service-details.html">Basic Skin</a></li>
+                                            <li class="menu-item"><a href="service-1.html"> Louver Skin</a></li>
+                                            <li class="menu-item"><a href="service-2.html"> Architecture Skin</a></li>
+                                            <li class="menu-item"><a href="service-details.html">Block Skin</a></li>
+                                            <li class="menu-item"><a href="service-details.html"> Rustikotta Skin</a></li>
+                                            <li class="menu-item"><a href="service-details.html"> Listelo  Skin</a></li>
+                                            <li class="menu-item"><a href="service-details.html"> Brick Skin</a></li>                                          
+                                            <li class="menu-item"><a href="service-details.html"> Colour Skin</a></li>
+                                        </ul>
+                                    </li> 
+                                    
+                                    
+                                    
+                                    
+                                    
+                                     <li class="menu-item menu-item-has-children"><a href="#">Mahima</a>
+                                        <ul class="sub-menu">
+                                            <li class="menu-item"><a href="service-1.html">Service One</a></li>
+                                            <li class="menu-item"><a href="service-2.html">Service Two</a></li>
+                                            <li class="menu-item"><a href="service-details.html">Service Details</a></li>
+                                        </ul>
+                                    </li> 
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    <li class="menu-item menu-item-has-children"><a href="#">Steni</a>
+                                        <ul class="sub-menu">
+                                            <li class="menu-item"><a href="shop-1.html">Shop One</a></li>
+                                            <li class="menu-item"><a href="shop-2.html">Shop Two</a></li>
+                                            <li class="menu-item"><a href="shop-3.html">Shop Three</a></li>
+                                            <li class="menu-item"><a href="shop-product.html">Product Details</a></li>
+                                            <li class="menu-item"><a href="shop-cart.html">Shop Cart</a></li>
+                                            <li class="menu-item"><a href="shop-checkout.html">Checkout</a></li>
+                                            <li class="menu-item"><a href="login.html">Login</a></li>
+                                        </ul>
+                                    </li>
+                                    
+                                </ul>
+                            </li>
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                            
+                             <li class="menu-item"><a href="project-1.html">Services</a></li>
+                            <li class="menu-item"><a href="blog.html">Blog</a></li>
+                           
+                        </ul>
+                    </div>
+                    <div class="header_right_part d-flex align-items-center">
+                        <button class="aside_open">
+                            <span class="line"></span>
+                            <span class="line"></span>
+                            <span class="line"></span>
+                        </button>
+                       
+                        <div class="open_search">
+                            <form class="search_form" action="https://wpthemebooster.com/demo/themeforest/html/mrittik/dark/search.php">
+                                <input type="text" name="search" class="keyword form-control" placeholder="Search..." >
+                                <button type="submit" class="form-control-submit"><i class="bi bi-search"></i></button>
+                            </form>
+                        </div>
+
+                       
+                        <button type="button" class="mr_menu_toggle d-lg-none">
+                            <i class="bi bi-list"></i>
+                        </button>
+                    </div>
+                </div>
+			</div>
+		</header>
+
+     <div class="mr_menu">
+			<div class="mr_menu_overlay"></div>
+			<button type="button" class="mr_menu_close"><i class="bi bi-x-lg"></i></button>
+            
+                <div class="">
+                        <a href="home.html" class="light_logo"><img src="../assets/img/log.png" alt="logo"></a>
+                        
+                   
+            </div> <!-- Keep this div empty. Logo will come here by JavaScript -->
+			<div class="mr_navmenu"></div> <!-- Keep this div empty. Menu will come here by JavaScript -->
+
+            <!-- Footer-->
+            <footer class="footer p-0">
+                <div class="footer_inner pb-0">
+                    <div class="footer_elements d-flex align-items-center justify-content-center">
+                        <div class="footer_elements_inner">
+                            <div class="footer_social">
+                                <ul class="social_list justify-content-center">
+                                    <li class="facebook"><a href="#"><i class="bi bi-facebook"></i></a></li>
+                                    <li class="twitter"><a href="#"><i class="bi bi-twitter"></i></a></li>
+                                    <li class="instagram"><a href="#"><i class="bi bi-instagram"></i></a></li>
+                                    <li class="youbetube"><a href="#"><i class="bi bi-youtube"></i></a></li>
+                                </ul>
+                            </div>
+                           
+                            <div class="copyright">
+                                <p>Mrittik 2023. All Rights Reserved</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+		</div>
+           
+        <div class="aside_info_wrapper">
+			<button class="aside_close"><i class="bi bi-x-lg"></i></button>
+            <div class="aside_logo">
+                <a href="home.html" class="light_logo"><img src="../assets/img/log.png" alt="logo"></a>
+                <a href="home.html" class="dark_logo"><img src="../assets/img/log.png" alt="logo"></a>
+            </div>
+			<div class="aside_info_inner">
+                
+                
+                <div class="aside_info_inner_box">
+                    <h5>Contact Info</h5>
+                    <p>+91 98450 (62303)</p>
+                    <p>3 Madison Street, NY <br> United States of America</p>
+                    <p>lcvenkat@xteriohub.com</p>
+
+                    <h5>Office Address</h5>
+                    <p>Plot No 5, Scalex, Vaswani Augusta Lane,
+                        Whistling Greens, Challaghatta,
+                        Embassy Golf Link Road, Domlur,
+                        Bangalore - 560071</p>
+                </div>
+                <div class="social_sites">
+                    <ul class="d-flex align-items-center justify-content-center">
+                        <li><a href="#"><i class="bi bi-facebook"></i></a></li>
+                        <li><a href="#"><i class="bi bi-twitter"></i></a></li>
+                        <li><a href="#"><i class="bi bi-instagram"></i></a></li>
+                        <li><a href="#"><i class="bi bi-youtube"></i></a></li>
+                    </ul>
+                </div>
+			</div>
+		</div> 
+        
+       
+
+
+
+
+
+<div class="wrapper">
+    <div class="theme_slider_8 p-0">
+        <div class="swiper swiper_theme_slider_7 swiper-initialized swiper-horizontal swiper-pointer-events swiper-watch-progress swiper-backface-hidden" style="height: 395px;">
+            <div class="swiper-wrapper" id="swiper-wrapper-af12561ee62b8883" aria-live="polite">
+                <div class="swiper-slide swiper-slide-visible swiper-slide-active" role="group" aria-label="1 / 3" style="width: 1530px;">
+                    <div class="slider" style="background-image: url('../assets/Rustikota/FONDO-2-Rustikotta-Prime-RK-EK1038-Tampico-1.jpg')">
+                        <div class="container">
+                            <div class="slide_content" style="will-change: transform; transform: perspective(1400px) rotateX(0deg) rotateY(0deg);">
+                                <div class="slide_content_wrapper mb-0 h-auto">
+                                    <div class="slide_content_inner">
+                                        <h4><a href="project-details.html" class="text-white text-uppercase">RUSTIKOTTA SKIN</a></h4>
+                                        <div class="details_link">
+                                           
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide swiper-slide-next" role="group" aria-label="2 / 3" style="width: 1530px;">
+                    <div class="slider" style="background-image: url('../assets/Rustikota/Fondo-Rustikotta-Prime-RK-EK1038-Tampico.jpg')">
+                        <div class="container">
+                            <div class="slide_content">
+                                <div class="slide_content_wrapper mb-0 h-auto">
+                                    <div class="slide_content_inner">
+                                        <h4><a href="project-details.html" class="text-white text-uppercase">RUSTIKOTTA SKIN</a></h4>
+                                        <div class="details_link">
+                                           
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide" role="group" aria-label="3 / 3" style="width: 1530px;">
+                    <div class="slider" style="background-image: url('../assets/Rustikota/banner_RK_02.jpg')">
+                        <div class="container">
+                            <div class="slide_content">
+                                <div class="slide_content_wrapper mb-0 h-auto">
+                                    <div class="slide_content_inner">
+                                        <h4><a href="project-details.html" class="text-white text-uppercase">RUSTIKOTTA SKIN</a></h4>
+                                        <div class="details_link">
+                                           
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+               <div class="container d-flex align-items-center justify-content-between mt-5" style="flex-wrap: wrap; background-color: #fff;">
+            <!-- Image Section -->
+            <div class="abc" style="flex: 1; animation: fadeIn 2s; ">
+              <img src="../assets/LouverSkin/IMAGEN-MEDIDAS-ORGANIC-LOUVER_Mesa-de-trabajo-1.jpg" 
+                   alt="Organic Louver" 
+                   style="width: 80%;  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
+            </div>
+        
+            <!-- Text Section -->
+            <div style="flex: 1; animation: slideUp 2s; max-width: 50%;">
+              <h1 style="font-family: Arial, sans-serif; font-size: 3.5rem; font-weight: bold; color: #2c3e50; display: flex;justify-content: center;margin-bottom: 10px;">
+                Infinite Combinations
+              </h1>
+              <p2 style="font-family: Arial, sans-serif; font-size: 1.5rem; color: #515858; line-height: 1.6;">
+                Each Organic Louver piece becomes a work of art, featuring geometric, sinuous, or pointed shapes. These versatile
+                pieces can be used for cladding facades, decorative elements, room dividers, sunshades, or ventilated building
+                envelopes. Whether used indoors or outdoors, Organic Louver allows for endless design possibilities, offering
+                elegant and innovative solutions.
+              </p2>
+            </div>
+          </div>
+            
+            <!-- Add Pagination -->
+            <!-- <div class="swiper-pagination"></div> -->
+
+            <!-- Add Buttons -->
+            <div class="swiper-button-prev details_link l-dir pagination-previous swiper-button-disabled" tabindex="0" role="button" aria-label="Previous slide" aria-controls="swiper-wrapper-21017c1f57e2a1ea" aria-disabled="true" fdprocessedid="9wmua"><a href="#"><span class="link_icon"><span class="line"></span> <span class="circle"></span><span class="dot"></span></span></a></div>
+            <div class="swiper-button-next details_link r-dir pagination-next" tabindex="0" role="button" aria-label="Next slide" aria-controls="swiper-wrapper-21017c1f57e2a1ea" aria-disabled="false" fdprocessedid="zr14l6"><a href="#"><span class="link_icon"><span class="line"></span> <span class="circle"></span><span class="dot"></span></span></a></div>
+            
+        <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
+    </div>
+</div>
+
+
+
+<div class="container d-flex align-items-center justify-content-between mt-5" style="flex-wrap: wrap; ">
+    <!-- Image Section -->
+    <div class="abc" style="flex: 1; animation: fadeIn 2s; ">
+      <img src="../assets/Rustikota/img_RK_01-1.jpg" 
+           alt="Organic Louver" 
+           style="width: 80%;  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
+    </div>
+
+    <!-- Text Section -->
+    <div style="flex: 1; animation: slideUp 2s; max-width: 50%; ">
+      <h1 style="font-family: Arial, sans-serif; font-size: 3.5rem; font-weight: bold; color: #2c3e50; display: flex;justify-content: center;margin-bottom: 10px;">
+        Sustainability Without Maintenance
+      </h1>
+      <p2 style="font-family: Arial, sans-serif; font-size: 1.5rem; color: #515858; line-height: 1.6;">
+        Rustikotta makes a significant contribution to sustainable development and construction by setting pioneering standards for architectural design.
+        This ceramic material is designed to require zero maintenance, as external conditions do not affect it, and rainwater alone is enough to keep it clean.
+      </p2>
+      <p2 style="font-family: Arial, sans-serif; font-size: 1.5rem; color: #515858; line-height: 1.6;">
+        A Smart Investment
+        Rustikotta offers high quality and durability, making it a valuable long-term investment.
+        It provides endless possibilities for creative expression, allowing you to add a personal and unique touch to your project.
+      </p2>
+    </div>
+  </div>
+
+  
+  <div
+  class="container d-flex align-items-center justify-content-between mt-5"
+  style="flex-wrap: wrap; margin-top: 20px; gap: 20px;"
+>
+  <div
+    style="
+      flex: 1;
+      animation: slideUp 2s;
+      max-width: 50%;
+      margin-top: 100px;
+      margin-right: 30px;
+    "
+  >
+    <h1
+      style="
+        font-family: Arial, sans-serif;
+        font-size: 3.5rem;
+        font-weight: bold;
+        color: #2c3e50;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 10px;
+      "
+    >
+      Present, Past, and Future
+    </h1>
+    <p2
+      style="
+        font-family: Arial, sans-serif;
+        font-size: 1.5rem;
+        color: #515858;
+        line-height: 1.6;
+      "
+    >
+      Increasingly, architects and designers are turning to Rustikotta for its
+      aesthetic appeal and design freedom. It provides the flexibility to
+      create innovative, one-of-a-kind buildings or renovate existing
+      structures, ensuring sustainability for future generations. Facades made
+      with Rustikotta represent a sustainable investment from environmental,
+      social, and economic perspectives.
+    </p2>
+    <p2
+      style="
+        font-family: Arial, sans-serif;
+        font-size: 1.5rem;
+        color: #515858;
+        line-height: 1.6;
+      "
+    >
+      Crafted using the finest materials and the most advanced ceramic
+      technology, Rustikotta is resistant to extreme temperatures, waterproof,
+      easy to install, and creates stunning visual effects.
+    </p2>
+  </div>
+  <div
+    class="abc"
+    style="flex: 1; animation: fadeIn 2s; margin-top: 100px;"
+  >
+    <img
+      src="../assets/Rustikota/img_RK_03-2.jpg"
+      alt="Organic Louver"
+      style="width: 80%; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);"
+    />
+  </div>
+</div>
+
+
+<div class="container d-flex align-items-center justify-content-between mt-5" style="flex-wrap: wrap;">
+    <!-- Image Section 1 -->
+    <div class="abc image-container" style="flex: 1; animation: fadeIn 2s;">
+      <img
+       
+        src="../assets/Rustikota/rustikotta-classic-en-es-02.png"
+        alt="Organic Louver"
+        class="hover-image"
+        style="width: 80%;"
+      />
+      <div class="hover-text">
+        <h5>Rustikotta Classic</h5>
+        Featuring a smooth, uniform texture, Rustikotta Classic delivers a
+        seamless, homogeneous finish across the façade assembly.
+      </div>
+    </div>
+  
+    <!-- Image Section 2 -->
+    <div class="abc image-container" style="flex: 1; animation: fadeIn 2s;">
+      <img
+      src="../assets/Rustikota/rustikotta-prime-en-1.png"
+        alt="Organic Louver"
+        class="hover-image"
+        style="width: 80%;"
+      />
+      <div class="hover-text">
+        <h5>Rustikotta Prime</h5>
+        With a deeper texture that is tactilely engaging, Rustikotta Prime
+        features distinctive lines on its surface, creating a natural, textured finish.
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <h1 style=" text-align: center;
+    font-size: 44px;
+    font-weight: 600;
+    margin: 90px 0;">ASSEMBLY RUSTIKOTTA PRIME</h1>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div style=" width: 100%;
+        height: auto;
+        border: 2px solid #ccc;
+        border-radius: 8px;">
+          <img src="../assets/Rustikota/Rustikotta-Classic-montaje.jpg" alt="Rustikotta Prime Image 1">
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div style=" width: 100%;
+        height: auto;
+        border: 2px solid #ccc;
+        border-radius: 8px;">
+          <img src="../assets/Rustikota/Rustikotta-Classic-montaje-2.jpg" alt="Rustikotta Prime Image 2">
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div style=" width: 100%;
+        height: auto;
+        border: 2px solid #ccc;
+        border-radius: 8px;">
+          <img src="../assets/Rustikota/Rustikotta-Classic-montaje-3.jpg" alt="Rustikotta Prime Image 3">
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="container" style="margin-bottom: 100px;">
+    <h1 style=" text-align: center;
+    font-size: 44px;
+    font-weight: 600;
+    margin: 90px 0;">ASSEMBLY RUSTIKOTTA PRIME</h1>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div style=" width: 100%;
+        height: auto;
+        border: 2px solid #ccc;
+        border-radius: 8px;">
+          <img src="../assets/Rustikota/Rustikotta-Prime-montaje.jpg" alt="Rustikotta Prime Image 1">
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div style=" width: 100%;
+        height: auto;
+        border: 2px solid #ccc;
+        border-radius: 8px;">
+          <img src="../assets/Rustikota/Rustikotta-Prime-montaje-1-1.jpg" alt="Rustikotta Prime Image 2">
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div style=" width: 100%;
+        height: auto;
+        border: 2px solid #ccc;
+        border-radius: 8px;">
+          <img src="../assets/Rustikota/Rustikotta-Prime-montaje-2.jpg" alt="Rustikotta Prime Image 3">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="image-hover-section">
+   <div>
+    <h2>RK-EK1005</h2>
+   
+    <div class="hover-div">
+      <img src="../assets/Rustikota/RK-EK1005-RED-FLAMED-3.jpg" alt="Image 1">
+      
+      <div class="overlay">
+        <img src="../assets/Rustikota/EK1005_RED-FLAMED-2-scaled-e1697697564940-1201x720.jpg" alt="Image 2">
+        <h3>RED FLAMED</h3>
+      </div>
+    </div>
+</div>
+<div>
+    <h2>RK-EK1027</h2>
+   
+    <div class="hover-div">
+      <img src="../assets/Rustikota/RK-EK1027-BLACK-OXID-5.jpg" alt="Image 1">
+      
+      <div class="overlay">
+        <img src="../assets/Rustikota/EK1027_BLACK-OXID-2-scaled-e1697699137137-1201x720.jpg" alt="Image 2">
+        <h3>BLACK OXID</h3>
+      </div>
+    </div>
+</div>
+
+<div>
+    <h2>RK-EK1051</h2>
+   
+    <div class="hover-div">
+      <img src="../assets/Rustikota/EK1051-NEW-BLACK-PIEZA-1.jpg" alt="Image 1">
+      
+      <div class="overlay">
+        <img src="../assets/Rustikota/EK1051-NEW-BLACK-LQ.jpg" alt="Image 2">
+        <h3>NEW BLACK</h3>
+      </div>
+    </div>
+</div>
+
+<div>
+    <h2>RK-EK1024</h2>
+   
+    <div class="hover-div">
+      <img src="../assets/Rustikota/FB_Antique_moss-retoque-final.jpg" alt="Image 1">
+      
+      <div class="overlay">
+        <img src="../assets/Rustikota/Rustikotta-Prime-RK-EK1024-Antique-Moss-7-pared-RETOCADO-25-10-23-1.jpg" alt="Image 2">
+        <h3>ANTIQUE MOSS</h3>
+      </div>
+    </div>
+</div>
+
+<div>
+    <h2>RK-EK1009</h2>
+   
+    <div class="hover-div">
+      <img src="../assets/Rustikota/RK-EK1009-LIGHT-GREY-FLAMED-3.jpg" alt="Image 1">
+      
+      <div class="overlay">
+        <img src="../assets/Rustikota/MANTA-RK-EK1009-LIGHT-GREY-FLAMED-2.jpg" alt="Image 2">
+        <h3>LIGHT GREY FLAMED</h3>
+      </div>
+    </div>
+</div>
+
+
+
+<div>
+    <h2>RK-EK1024</h2>
+   
+    <div class="hover-div">
+      <img src="../assets/Rustikota/RK-EK1038-TAMPICO-COLOR-1.jpg" alt="Image 1">
+      
+      <div class="overlay">
+        <img src="../assets/Rustikota/Rustikotta-Prime-RK-EK1038-Tampico-9-scaled-e1697697909661-1200x720.jpg" alt="Image 2">
+        <h3>  TAMPICO</h3>
+      </div>
+    </div>
+</div>
+
+<div>
+    <h2>RK-EK1014</h2>
+   
+    <div class="hover-div">
+      <img src="../assets/Rustikota/RK-EK1014-WHITE-SPLATTER-3.jpg" alt="Image 1">
+      
+      <div class="overlay">
+        <img src="../assets/Rustikota/september-producto-e1697699666400-1200x720.jpg" alt="Image 2">
+        <h3>
+            WHITE SEPTEMBER</h3>
+      </div>
+    </div>
+</div>
+
+
+
+
+
+  </section>
+
+        <footer class="footer bg-dark-200 box_padding">
+            <div class="footer_inner bg-black">
+                <div class="container">
+                    <div class="row align-items-end">
+                        <div class="col-lg-4 col-md-2 col-sm-2">
+                            <div class="section-header">
+                                <h2 style="color:#2596be">Contact</h2>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-5 col-sm-5">
+                            <div class="communication">
+                                <div class="info_body">
+                                    <h6>Studio Website</h6>
+                                    <h5>http://www.xteriohub.com/</h5>
+                                </div>
+                                <div class="info_body">
+                                    <h6>Email Address</h6>
+                                    <h5>lcvenkat@xteriohub.com</h5>
+                                </div>
+                                <div class="info_body">
+                                    <h6>Phone No</h6>
+                                    <h5>91 98450 (62303)</h5>
+                                </div>
+                                <div class="info_body">
+                                    <h6>Office Address</h6>
+                                    <h5>Plot No 5, Scalex, Vaswani Augusta Lane,
+                                        Whistling Greens, Challaghatta,
+                                        Embassy Golf Link Road, Domlur,
+                                        Bangalore - 560071</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-5 col-sm-5">
+                            <div class="footer_elements d-flex align-items-center justify-content-end">
+                                <div class="footer_elements_inner">
+                                    <div class="footer_logo">
+                                        <a href="home.html" class="light_logo"><img src="../assets/img/log.png" alt="logo"class="expo-logo"></a>
+                                    </div>
+                                    <div class="footer_social">
+                                        <ul class="social_list">
+                                            <li class="facebook"><a href="#"><i class="bi bi-facebook"></i></a></li>
+                                            <li class="twitter"><a href="#"><i class="bi bi-twitter"></i></a></li>
+                                            <li class="instagram"><a href="#"><i class="bi bi-instagram"></i></a></li>
+                                            <li class="youbetube"><a href="#"><i class="bi bi-youtube"></i></a></li>
+                                        </ul>
+                                    </div>
+                                    <!-- <div class="terms_condition">
+                                        <ul>
+                                            <li><a href="#">Terms</a></li>
+                                            <li><a href="#">Condition</a></li>
+                                            <li><a href="#">Policy</a></li>
+                                        </ul>
+                                    </div> -->
+                                    <div class="copyright">
+                                        <p>Mizzlecodes 2023. All Rights Reserved</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Section Grid Lines -->
+                <ul class="grid_lines d-none d-md-flex justify-content-between">
+                    <li class="grid_line"></li>
+                    <li class="grid_line"></li>
+                    <li class="grid_line"></li>
+                    <li class="grid_line"></li>
+                    <li class="grid_line"></li>
+                    <li class="grid_line"></li>
+                    <li class="grid_line"></li>
+                </ul>
+            </div>
+        </footer>
+        <!-- <div class="totop">
+            <a href="#">UP</a>
+        </div> -->
+        <!-- Section Grid Lines -->
+
+        <a href="#" class="btn-whatsapp-pulse">
+            <i class="fab fa-whatsapp"></i>
+        </a>  
+        <!-- Core JS -->
+        <script src="../assets/js/jquery-3.6.0.min.js"></script>
+        <script src="../assets/js/bootstrap.bundle.min.js"></script>                
+        <!-- Swiper for Slider Type -->
+        <script src="../plugins/swiper/swiper-bundle.min.js"></script>
+        <!-- Funfacts -->
+        <script src="../assets/js/funfacts.js"></script>
+        <!-- Portfolio -->
+        <script src="../plugins/isotope/isotope.pkgd.min.js"></script>
+        <script src="../plugins/isotope/imagesloaded.pkgd.min.js"></script>
+        <script src="../plugins/isotope/packery-mode.pkgd.js"></script>
+        <script src="../plugins/isotope/tilt.jquery.js"></script>
+        <script src="../plugins/isotope/isotope-init.js"></script>                
+        <!-- Cursor Effect -->
+        <script src="../plugins/cursor-effect/cursor-effect.js"></script>
+        
+        <!-- Select2 -->
+        <script src="../plugins/select2/js/select2.min.js"></script>
+        
+        <!-- AOS effect JS -->
+        <script src="../plugins/aos/aos.js"></script>
+        
+        <!-- Theme Custom JS -->
+        <script src="../assets/js/theme.js"></script>
+    </body>
+
+ 
+</html>
