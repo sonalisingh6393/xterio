@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Section Slider</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+    <style>
+        body {
+            background: #121212;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .sli-new {
+            max-width: 1200px;
+            margin: auto;
+            padding: 50px 20px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(255, 255, 255, 0.2);
+        }
+
+        .alider-new {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .slide-item {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .slide-item img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .slide-item h3 {
+            font-size: 1.5rem;
+            color: #ff4081;
+            margin-top: 15px;
+        }
+
+        .slide-item p {
+            font-size: 1rem;
+            color: #bbb;
+        }
+
+        @media (max-width: 768px) {
+            .sli-new {
+                padding: 30px 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container sli-new">
+    <div class="alider-new slider">
+        <div class="slide-item">
+            <img src="https://via.placeholder.com/300x200" alt="Image 1">
+            <h3>Heading 1</h3>
+            <p>This is the first slide description.</p>
+        </div>
+        <div class="slide-item">
+            <img src="https://via.placeholder.com/300x200" alt="Image 2">
+            <h3>Heading 2</h3>
+            <p>This is the second slide description.</p>
+        </div>
+        <div class="slide-item">
+            <img src="https://via.placeholder.com/300x200" alt="Image 3">
+            <h3>Heading 3</h3>
+            <p>This is the third slide description.</p>
+        </div>
+        <div class="slide-item">
+            <img src="https://via.placeholder.com/300x200" alt="Image 4">
+            <h3>Heading 4</h3>
+            <p>This is the fourth slide description.</p>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $('.slider').slick({
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 2000,
+            arrows: true,
+            responsive: [
+                {
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 1
+                    }
+                }
+            ]
+        });
+    });
+</script>
+</body>
+</html>

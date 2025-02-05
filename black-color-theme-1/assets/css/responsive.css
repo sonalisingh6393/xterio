@@ -24,5 +24,207 @@
     padding-left: 5px;
     padding-right: 5px;
 }
-    
+  .images-tiles{
+    margin-left:30px;
+  }
+  .contact-us-form{
+    margin-top:0px;
+  }
+  .baguette {
+    background-image: url(../img/baguette/banner.jpg);
+    background-repeat: no-repeat;
+    height: 412px;
+}
+.baguette h1 {
+    color: white;
+    font-size: 34px;
+    position: absolute;
+    margin-top: 53%;
+    margin-left: 52px;
+}
+.baguette111 {
+    background-image: url(../img/LISTELO-SKIN-SLIDER/1.jpg);
+    background-repeat: no-repeat;
+    height: 450px;
+}
+.baguette111 h1 {
+    color: white;
+    position: absolute;
+    font-size: 37px;
+    margin-top: 65%;
+    margin-left: 16%;
+}
+.tempio-2-section img {
+    padding-top: 50px;
+}
+.mission_bottom_part .section-header .border-line {
+    position: relative;
+    text-align: center;
+}
+.mission_bottom_part .section-header .border-line::after {
+    position: absolute;
+    content: "";
+    background: #ffffff;
+    width: 124px;
+    height: 2px;
+    bottom: -20px;
+    right: 121px;
+}
+.mission_bottom_part .mission_content p {
+    text-align: justify;
+    margin-bottom: 1.25rem;
+}
+.images-tempio-section img {
+    width: 100%;
+    height: 447px;
+}
+.project-paragraph {
+    background-color: #2596be;
+    color: white;
+    width: 174px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    font-size: 14px;
+}
+.brick-skin {
+    background-image: url(../img/brick-skin/baner-overlay.jpg);
+    width: 100%;
+    height: 400px;
+}
+.brick-skin h1 {
+    color: white;
+    position: absolute;
+    font-size: 33px;
+    margin-top: 57%;
+    margin-left: 21%;
+}
+.tempio-2-section {
+    padding-top: 00px;
+}
+.Why-architecture {
+    padding-top:50px;
+}
+.img-gell {
+    Margin-top: 100px;
+}
+.Sustainability {
+    margin-top: 100px;
+    background: rgba(37, 150, 190, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    padding-top: 120px;
+    width: 100%;
+    height: 909px;
+    padding-left: px;
+    padding-right: px;
+}
+
+.advantage h1 {
+    color: white;
+    position: absolute;
+    font-size: 32px;
+    margin-top: 66%;
+    margin-left: 12%;
+}
+.mission_bottom_part .section-header .border-line {
+    position: relative;
+    text-align: center;
+}
+.mission_bottom_part .section-header .border-line {
+    position: relative;
+    text-align: center;
+}
+.advantage{
+    background-image: url(../img/advantages/banner-advantage (1).jpg);
+    width: 100%;
+    height: 484px;
+}
+.mission_bottom_part .section-header .border-line {
+    position: relative;
+    text-align: center !important;
+    padding-top:5px;
+}
+.tempio-contact-page {
+    padding-top: 61px;
+}
+contact-us-form {
+    padding-top: 0px;
+}
+.packery .grid-item .works-info {
+    position: absolute;
+    right: 0;
+    top: auto;
+    bottom: 0;
+    padding: calc(1.34375rem + -25.03571vw);
+    margin-top: 0rem;
+    max-width: 398px;
+    background-color: #1b1b1b;
+    transform: perspective(250px) rotateY(-90deg);
+    transform-origin: right;
+    transition: all 0.5s ease-in-out;
+}
+.project-details_inner{
+    padding-top:15px;
+}
+.banner-lover-skin {
+    background-image: url(../LouverSkin/Tempio_Organic_Louver-21.jpg);
+    width: 100%;
+    height: 400px;
+}
+.banner-lover-skin h1 {
+    font-size: 32px;
+    position: absolute;
+    top: 59%;
+    margin-left: 15%;
+    color: white;
+}
+.slide_content .slide_content_wrapper .slide_content_inner {
+    background-color: ;
+    position: relative;
+    padding: 168px 30px 20px 32px;
+    z-index: 1;
+    transition: all 0.5s ease-in-out;
+}
+.theme_slider_8 .swiper-slide .slider {
+    background-repeat: repeat;
+    background-size: cover;
+    background-position: left center;
+    width: 100%;
+    height: 74%;
+    transition: all 0.5s ease-in-out;
+    display: flex
+;
+    justify-content: start;
+    align-items: center;
+    padding-top: calc(3rem + 18vw);
+    padding-bottom: calc(3rem + 18vw);
+}
+.slide_content .slide_content_wrapper .slide_content_inner h4{
+  font-size:20px;  
+}
+.highlight_banner {
+    padding-top: 150px;
+    padding-bottom: 33px;
+}
+.partner_flex .partner_content {
+    margin: 15px 1px;
+}
+.divider_bg {
+    position: relative;
+    z-index: 1;
+    width: 1px !important;
+    height: 0rem;
+    margin-top: calc(1.71875rem + 4.82143vw);
+}
+.large_font {
+    display: none;
+}
+.partner_flex .partner_content {
+    margin: 15px 0px;
+}
+
 }
